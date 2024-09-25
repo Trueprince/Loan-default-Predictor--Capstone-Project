@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Loan Default Predictor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url("{{ url_for('static', filename='font/CenturyGothic.ttf') }}") format('truetype');
+        }
+
+        body {
+            font-family: 'Century Gothic', sans-serif;
+        }
+
+        .result {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .recommendations {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ff6b6b;
+        }
+
+        .recommendations ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="text-center my-4">Loan Default Prediction</h1>
+        </header>
+
+        <main>
+            <div class="glass result text-center">
+                <h2>Prediction Result</h2>
+                <h3>Loan Default: <strong style="color: red;">Yes</strong></h3>
+            </div>
+
+            <div class="glass recommendations">
+                <h4>Recommendations for Improvement</h4>
+                <p>Unfortunately, our prediction suggests that you may default on the loan. Here are some steps you can take to improve your chances of getting approved:</p>
+                <ul>
+                    <li>Improve your credit score by making timely payments on existing debts.</li>
+                    <li>Lower your debt-to-income ratio by reducing outstanding debts.</li>
+                    <li>Consider consolidating loans to manage your debt more effectively.</li>
+                    <li>Increase your savings to show greater financial stability.</li>
+                    <li>Review and correct any errors in your credit report to improve your credit standing.</li>
+                    <li>Maintain stable employment and avoid frequent job changes to demonstrate income stability.</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="text-center mt-5">
+            <script src="vanilla-tilt.js"></script>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

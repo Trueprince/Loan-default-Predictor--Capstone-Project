@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Welcome To Loan Default Predictor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url("{{ url_for('static', filename='font/CenturyGothic.ttf') }}") format('truetype');
+        }
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background-image: url("{{ url_for('static', filename='images/home.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1>We-Provide: Revolutionizing Financial Futures with Predictive Insights</h1>
+        </header>
+        <main>
+            <div>
+                <form action="{{ url_for('main') }}" method="POST">
+                    <div class="row glass">
+                        <div class="col-md-6 col-lg-6 col-sm-12">
+                            <div class="mb-3">
+                                <h3>LOAN INFORMATION</h3>
+                                <label for="LoanAmount" class="form-label">Loan Amount</label>
+                                <input type="number" class="form-control" name="LoanAmount" id="LoanAmount" required>
+                                <label for="InterestRate" class="form-label">Interest Rate</label>
+                                <input type="number" step="0.01" class="form-control" name="InterestRate" id="InterestRate" required>
+                                <label for="LoanTerm" class="form-label">Loan Term (Months)</label>
+                                <input type="number" class="form-control" name="LoanTerm" id="LoanTerm" required>
+                                <label for="LoanPurpose" class="form-label">Loan Purpose</label>
+                                <select class="form-select" name="LoanPurpose" id="LoanPurpose" required>
+                                    <option value="0">Auto</option>
+                                    <option value="1">Business</option>
+                                    <option value="2">Education</option>
+                                    <option value="3">Home</option>
+                                    <option value="4">Other</option>
+                                </select>
+                                <label for="HasCoSigner" class="form-label">Has Co-Signer</label>
+                                <select class="form-select" name="HasCoSigner" id="HasCoSigner" required>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                                <label for="HasMortgage" class="form-label">Has Mortgage</label>
+                                <select class="form-select" name="HasMortgage" id="HasMortgage" required>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                                <label for="HasDependents" class="form-label">Has Dependents</label>
+                                <select class="form-select" name="HasDependents" id="HasDependents" required>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-12">
+                            <div class="mb-3">
+                                <h3>CUSTOMER INFORMATION</h3>
+                                <label for="Age" class="form-label">Age</label>
+                                <input type="number" class="form-control" name="Age" id="Age" required>
+                                <label for="Income" class="form-label">Income</label>
+                                <input type="number" class="form-control" name="Income" id="Income" required>
+                                <label for="CreditScore" class="form-label">Credit Score</label>
+                                <input type="number" class="form-control" name="CreditScore" id="CreditScore" required>
+                                <label for="MonthsEmployed" class="form-label">Months Employed</label>
+                                <input type="number" class="form-control" name="MonthsEmployed" id="MonthsEmployed" required>
+                                <label for="NumCreditLines" class="form-label">Number of Credit Lines</label>
+                                <input type="number" class="form-control" name="NumCreditLines" id="NumCreditLines" required>
+                                <label for="DTIRatio" class="form-label">Debt to Income Ratio</label>
+                                <input type="number" step="0.01" class="form-control" name="DTIRatio" id="DTIRatio" required>
+                                <label for="Education" class="form-label">Education</label>
+                                <select class="form-select" name="Education" id="Education" required>
+                                    <option value="0">High School</option>
+                                    <option value="1">Bachelor's</option>
+                                    <option value="2">Master's</option>
+                                    <option value="3">PhD</option>
+                                </select>
+                                <label for="EmploymentType" class="form-label">Employment Type</label>
+                                <select class="form-select" name="EmploymentType" id="EmploymentType" required>
+                                    <option value="0">Full-time</option>
+                                    <option value="1">Part-time</option>
+                                    <option value="2">Self-employed</option>
+                                    <option value="3">Unemployed</option>
+                                </select>
+                                <label for="MaritalStatus" class="form-label">Marital Status</label>
+                                <select class="form-select" name="MaritalStatus" id="MaritalStatus" required>
+                                    <option value="0">Single</option>
+                                    <option value="1">Married</option>
+                                    <option value="2">Divorced</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                {% if prediction_text %}
+                <div class="alert alert-info mt-3" role="alert">
+                    {{ prediction_text }}
+                </div>
+                {% endif %}
+            </div>
+        </main>
+        <footer>
+            <script src="vanilla-tilt.js"></script>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
+

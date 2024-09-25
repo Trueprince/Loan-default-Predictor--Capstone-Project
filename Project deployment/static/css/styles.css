@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0); /* Black text */
+    font-weight: bold; /* Bold text */
+}
+
+body {
+    background-color: #f5f5f5; /* Light grey background */
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+h1, h3 {
+    font-size: 50px;
+    color: #333; /* Dark grey for headings */
+    font-weight: bold; /* Bold text */
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.glass {
+    margin: 10px;
+    padding: 50px 35px;
+    border: 1px solid rgba(0, 0, 0, 0.137); /* Black border */
+    border-radius: 16px;
+    box-shadow: 0 40px 30px rgba(0, 0, 0, 0.24); /* Black shadow */
+}
+
+.form-control {
+    background-color: #fff; /* White input fields */
+    border-radius: 0;
+    color: rgb(0, 0, 0); /* Black text */
+    border: 0 solid;
+    border-bottom: 2px solid rgb(0, 0, 0); /* Black border */
+    font-weight: bold; /* Bold text */
+}
+
+.InitialListStatus {
+    background-color: #ebe1f7ce;
+    border: 0 solid #d5fffe;
+    color: black;
+    font-weight: bold; /* Bold text */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-label {
+    color: rgb(0, 0, 0); /* Black label text */
+    margin: 10px 0 10px 0;
+    font-weight: bold; /* Bold text */
+}
+
+.form-control:focus {
+    background-color: #ddd; /* Light grey on focus */
+    color: rgb(0, 0, 0); /* Black text */
+}
+
+.form-control:hover {
+    background-color: #ddd; /* Light grey on hover */
+    color: rgb(0, 0, 0); /* Black text */
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold; /* Bold text */
+}
+
+.btn {
+    display: flex;
+    border: 0 solid;
+    width: 50%;
+}
+
+button {
+    background: #333; /* Dark grey button */
+    border: 0 solid;
+    border-radius: 7px;
+    height: 40px;
+    margin: 10px auto;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 200px;
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+}
+
+button:hover {
+    background: #555; /* Lighter grey on hover */
+}
+
+.result {
+    margin-top: 100px;
+}

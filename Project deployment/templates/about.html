@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>About Us - We-Provide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        @font-face {
+            font-family: 'Century Gothic';
+            src: url("{{ url_for('static', filename='font/CenturyGothic.ttf') }}") format('truetype');
+        }
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background-image: url("{{ url_for('static', filename='images/home.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+        }
+        h3 {
+            margin-top: 20px;
+            font-size: 1.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1>About Us - We-Provide</h1>
+        </header>
+        <main>
+            <div class="row glass">
+                <div class="col-md-12">
+                    <h3>Welcome to We-Provide</h3>
+                    <p>At We-Provide, we are dedicated to revolutionizing financial futures through cutting-edge predictive insights. Our mission is to empower individuals and businesses with the knowledge they need to make informed financial decisions.</p>
+
+                    <h3>Our Vision</h3>
+                    <p>In an ever-evolving financial landscape, we strive to be at the forefront of innovation, offering advanced solutions that drive accuracy and efficiency. Our commitment is to deliver data-driven insights that not only predict loan defaults but also enhance overall financial stability and growth.</p>
+
+                    <h3>Our Expertise</h3>
+                    <p>With a robust blend of data science and machine learning expertise, We-Provide specializes in developing predictive models that are tailored to meet the unique needs of our clients. Our flagship product, the Loan Default Predictor, leverages state-of-the-art algorithms to provide accurate risk assessments and help manage financial risk effectively.</p>
+
+                    <h3>Our Approach</h3>
+                    <p>Our approach is grounded in the principles of transparency, accuracy, and customer-centricity. We employ the CRISP-DM methodology to ensure our models are built on solid foundations and continuously refined for optimal performance. By integrating advanced techniques such as Random Forest, Decision Trees, and Gradient Boosting, we deliver solutions that are not only powerful but also practical.</p>
+
+                    <h3>Our Team</h3>
+                    <p>Our team of dedicated data scientists, engineers, and financial analysts work collaboratively to drive innovation and excellence. We are passionate about using our skills to make a meaningful impact and help our clients achieve their financial goals.</p>
+
+                    <h3>Join Us</h3>
+                    <p>Whether you're looking to understand your financial risks better or seeking innovative solutions to manage them, We-Provide is here to support you. Explore our services and discover how our predictive insights can transform your financial strategy.</p>
+
+                    <h3>Contact Us</h3>
+                    <p>For more information about our services or to discuss how we can assist you, please <a href="#">contact us</a>.</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script src="vanilla-tilt.js"></script>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
